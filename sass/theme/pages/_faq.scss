@@ -1,0 +1,172 @@
+/*===============================
+=               FAQ             =
+===============================*/
+
+#faq {
+    padding-top: 75px;
+    padding-bottom: 95px;
+    @include media-breakpoint-only(lg) {
+        padding-top: 60px;
+        padding-bottom: 80px;
+    }
+    @include media-breakpoint-only(md) {
+        padding-top: 50px;
+        padding-bottom: 60px;
+    }
+    @include media-breakpoint-down(sm) {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .faq__accordion {
+        .faq-wrap {
+            border: 1px solid #ececec;
+            border-top:0;
+        }
+        h3 {
+            font-family: $lato-bold;
+            position: relative;
+            padding: 12px 30px 12px 15px;
+            color: #222222;
+            font-size: 0.813em;
+            line-height: 1.7;
+            cursor: pointer;
+            background-color: #fdfdfd;
+            @include animate-fade;
+            border:0;
+            margin: 0;
+            &:hover {
+                cursor: pointer;
+                color: $red;
+                background-color: #f8f8f8;
+            }
+            &:focus {
+                outline: none!important;
+            }
+            &:after {
+                font-family: "Font Awesome 5 Pro";
+                content: "\f105";
+                @include centre(y);
+                right: 15px;
+                font-size: 1.125em;
+                font-weight: 900;
+                color: #adadad;
+                @include animate-fade;
+            }
+            &.ui-state-active {
+                background-color: #f8f8f8;
+                &:after {
+                    content: "\f107";
+                }
+            }
+        }
+        .ui-accordion-content {
+            border:0;
+            padding: 20px;
+            p {
+                @include regular-text;
+                color: #777777;
+                strong {
+                    color: $red;
+                    font-family: $lato-bold;
+                }
+                a {
+                    font-family: $lato-bold;
+                    color: $blue;
+                    &:hover {
+                        color: $red;
+                        text-decoration: none;
+                    }
+                }
+            }
+            ul {
+                @include list-style;
+                li {
+                    margin-bottom: .5em;
+                    a {
+                        text-decoration: underline;
+                        &:hover {
+                            color: $red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.content__accordion {
+    .faq-wrap {
+        border: 1px solid #ececec;
+        border-top:0;
+    }
+    h3 {
+        font-family: $lato-bold;
+        position: relative;
+        padding: 12px 30px 12px 15px;
+        color: #222222;
+        font-size: 0.813em !important;
+        line-height: 1.7;
+        cursor: pointer;
+        background-color: #fdfdfd;
+        @include animate-fade;
+        border:0;
+        margin: 0 !important;
+        &:hover {
+            cursor: pointer;
+            color: $red;
+            background-color: #f8f8f8;
+        }
+        &:focus {
+            outline: none!important;
+        }
+        &:after {
+            font-family: "Font Awesome 5 Pro";
+            content: "\f105";
+            @include centre(y);
+            right: 15px;
+            font-size: 1.125em;
+            font-weight: 900;
+            color: #adadad;
+            @include animate-fade;
+        }
+        &.ui-state-active {
+            background-color: #f8f8f8;
+            &:after {
+                content: "\f107";
+            }
+        }
+    }
+    .ui-accordion-content {
+        border:0;
+        padding: 20px;
+        p {
+            @include regular-text;
+            color: #777777;
+            strong {
+                color: $red;
+                font-family: $lato-bold;
+            }
+            a {
+                font-family: $lato-bold;
+                color: $blue;
+                &:hover {
+                    color: $red;
+                    text-decoration: none;
+                }
+            }
+        }
+        ul {
+            @include list-style;
+            li {
+                margin-bottom: .5em;
+                a {
+                    text-decoration: underline;
+                    &:hover {
+                        color: $red;
+                    }
+                }
+            }
+        }
+    }
+}
+
+

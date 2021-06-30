@@ -1,0 +1,145 @@
+#about-page {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    h2 {
+        @include regular-text;
+        font-family: $lato-bold;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+    p {
+        @include regular-text;
+    }
+    .about-photo, .about-content {
+        margin-bottom: 30px;
+    }
+}
+
+#sitemap-page {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    h2 {
+        @include heading-font3;
+    }
+    ul {
+        @include list-style;
+        ul {
+            list-style-type: square;
+        }
+        li {
+            a {
+                color: #2e2e2e;
+                &:hover {
+                    color: $red;
+                }
+            }
+        }
+    }
+}
+
+#regular-page {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    h2 {
+        @include heading-font2;
+        margin-bottom: 20px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    h3 {
+        @include heading-font3;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+    h4 {
+        @include heading-font4;
+        margin-bottom: 9px;
+    }
+    p {
+        @include regular-text;
+        strong {
+            font-weight: normal;
+            font-family: $lato-bold;
+            color: $red;
+        }
+        a {
+            color: $red;
+            font-family: $lato-bold;
+            &:hover {
+                color: $red;
+                text-decoration: underline;
+            }
+        }
+        em {
+            font-style: normal;
+            font-family: $lato-italic;
+        }
+    }
+    ul, ol {
+        @include list-style;
+        li {
+            a {
+                color: $red;
+                font-family: $lato-bold;
+                &:hover {
+                    color: $red;
+                    text-decoration: underline;
+                }
+            }
+            strong {
+                font-weight: normal;
+                color: $red;
+                font-family: $lato-bold;
+            }
+            em {
+                font-style: normal;
+                font-family: $lato-italic;
+            }
+        }
+    }
+    ol {
+        @include ordered-list-style;
+    }
+    .alignright {
+        display: inline;
+        float: right;
+        margin-left: 1.5em;
+        margin-bottom: 1.5em;
+        @include media-breakpoint-down(sm) {
+            margin-left: auto;
+            margin-right: auto;
+            font: none;
+        }
+    }
+    .alignleft {
+        display: inline;
+        float: left;
+        margin-right: 1.5em;
+        margin-bottom: 1.5em;
+        @include media-breakpoint-down(sm) {
+            margin-left: auto;
+            margin-right: auto;
+            font: none;
+        }
+    }
+    .red-leadline {
+        @include heading-font4;
+        color: $red;
+        display: block;
+        margin-bottom: 18px;
+    }
+    .country-map {
+        iframe {
+            max-width: 600px;
+        }
+    }
+}
+
+#thankyou-page {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center;
+    p {
+        @include animate-fade;
+    }
+}

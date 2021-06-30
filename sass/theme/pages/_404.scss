@@ -1,0 +1,82 @@
+/*===============================
+=              404            =
+===============================*/
+
+#error-page {
+    padding-top: 60px;
+    padding-bottom: 150px;
+    text-align: center;
+    background-color: #fff;
+    @include media-breakpoint-down(sm) {
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+    .not-found-title {
+        font-family: $lato-bold;
+        display: block;
+        font-size: 1.750em;
+        line-height: 1.5em;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        color: #777777;
+    }
+    h1 {
+        font-family: $lato-light;
+        font-size: 220px;
+        line-height: 100%;
+        display: block;
+        font-weight: 300;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        color: $red;
+        @include breakpoint (desktop) {
+            font-size: 180px;
+        }
+        @include media-breakpoint-only(lg) {
+            font-size: 140px;
+        }
+        @include media-breakpoint-only(md) {
+            font-size: 100px;
+        }
+        @include media-breakpoint-down(sm) {
+            font-size: 80px;
+        }
+    }
+    p {
+        @include regular-text;
+    }
+    form {
+        input {
+            display: flex;
+            align-items: center;
+            position: relative;
+            display: block;
+            width: 100%;
+            font-family: $lato-reg;
+            font-size: 13px;
+            padding: 12px 28px 12px 15px;
+            border: 2px solid rgba(0, 0, 0, 0.12);
+            color: #767676;
+            background-color: #fdfdfd;
+
+            button[type="submit"] {
+                @include centre(y);
+                right: 15px;
+                background: none;
+                padding: 0;
+                border: 0;
+                height: 100%;
+                @include animate-fade;
+                i {
+                    color: #767676; 
+                    font-size: 16px;
+                }
+                &:hover {
+                    i {
+                        color: $red;
+                    }
+                }
+            }
+        }
+    }
+}
