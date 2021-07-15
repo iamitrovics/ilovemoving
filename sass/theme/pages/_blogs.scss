@@ -302,7 +302,6 @@
 }
 #blog-page {
     padding-top: 50px;
-    padding-bottom: 70px;
 
     @include breakpoint (desktop) {
         padding-top: 50px;
@@ -310,17 +309,14 @@
 
     @include media-breakpoint-only(lg) {
         padding-top: 40px;
-        padding-bottom: 60px;
     }
 
     @include media-breakpoint-only(md) {
         padding-top: 30px;
-        padding-bottom: 50px;
     }
 
     @include media-breakpoint-down(sm) {
         padding-top: 30px;
-        padding-bottom: 0px;
     }
 
     h2 {
@@ -680,6 +676,43 @@
                 transform: translate(0, 0)!important;
                 transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1) 0.4s!important;
             }
+        }
+    }
+}
+
+// CTA
+.quote-cta--single {
+    text-align: center;
+    padding:35px;
+    background: #ed1d24;
+    background: linear-gradient(to right,#ed1d24 0%,#f36b23 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ed1d24",endColorstr="#f36b23",GradientType=1);
+    border-radius: 12px;
+    span.title {
+        display: block;
+        margin-bottom: 15px;
+        font-size: 40px;
+        line-height: 1.2;
+        color:$white;
+        @include media-breakpoint-down(md) {
+            font-size: 32px;
+        }
+    }
+    a.btn-cta {
+        @include red-btn;
+        background:$white;
+        color:$black;
+        height: 60px;
+        line-height: 60px;
+        width: 280px;
+        margin:0px auto;
+        @include media-breakpoint-down(md) {
+            height: 52px;
+            line-height: 52px;
+        }
+        &:hover {
+            background:$black;
+            color:$white;
         }
     }
 }
