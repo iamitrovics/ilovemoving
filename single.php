@@ -256,7 +256,7 @@ $container = get_theme_mod( 'understrap_container_type' );
     </div>
     <!-- /#blog-page -->
 
-    <div class="quote-form-area">
+    <div class="quote-form-area" id="bottom-form">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">

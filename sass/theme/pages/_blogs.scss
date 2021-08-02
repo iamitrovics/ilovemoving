@@ -709,6 +709,7 @@
         @include media-breakpoint-down(md) {
             height: 52px;
             line-height: 52px;
+            width: 220px;
         }
         &:hover {
             background:$black;
