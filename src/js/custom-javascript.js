@@ -229,6 +229,8 @@
 
 		});
 
+        $('.full-content a').attr("target","_blank");
+
         $('#city-reviews-slider').slick({
             dots: true,
             infinite: true,
