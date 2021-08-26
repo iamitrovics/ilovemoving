@@ -130,7 +130,6 @@
 
         $('#blog-page .blog-photo [data-fancybox="gallery"]').fancybox();
 	
-		//$('#top-cta .features-list .feature-box h3').matchHeight();
 
    
         $(document).on('click', '.moving-tips .moving-item h4 a', function(event) {
@@ -245,6 +244,36 @@
               }
             });
           });
+          
+          $(function() {
+            $('#featured-article--page .toc-wrapper ul li a').click(function() {
+              if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                if (target.length) {
+                  $('html, body').animate({
+                    scrollTop: target.offset().top - 100
+                  }, 1000);
+                  return false;
+                }
+              }
+            });
+          });
+          
+          $(function() {
+            $('.btn-down').click(function() {
+              if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                if (target.length) {
+                  $('html, body').animate({
+                    scrollTop: target.offset().top - 100
+                  }, 1000);
+                  return false;
+                }
+              }
+            });
+          });          
 
         $('#city-reviews-slider').slick({
             dots: true,

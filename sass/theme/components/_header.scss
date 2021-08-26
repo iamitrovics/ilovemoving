@@ -345,3 +345,73 @@
         color:#fff;
     }
 }
+
+#featured-header {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    min-height: 657px;    
+    position: relative;
+    .overlay {
+        position: absolute;
+        left:0px;
+        top:0px;
+        width: 50%;
+        height: 100%;
+        background-color: rgba(238,56,0,0.8);
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+        }
+    }
+    .container {
+        min-height: 657px;   
+        display: flex;
+    }
+    .hero-caption {
+        position: relative;
+        z-index: 99;
+        width: 40%;
+        align-self: center;
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+        }
+        h1 {
+            @include page-title;
+            color:$white;
+            font-size: 4em;
+            line-height: 1.2;
+        }
+        p {
+            color:$white;
+            text-align: center;
+            font-size: 1.25em;
+        }
+        .btn-down {
+            width: 100px;
+        }
+    }
+}
+
+.btn-down {
+    margin:0px auto;
+    z-index:999;
+    width: 80px;
+    display: block;
+    @include centre(x);
+    bottom:20px;
+    img {
+        filter: brightness(0) invert(1);
+    }
+}
+
+@keyframes flickerAnimation {
+    0%   { opacity:1;bottom:0px; }
+    50%  { opacity:0.5;bottom:5px; }
+    100% { opacity:1; bottom:0px; }
+  }
+  .animate-flicker {
+     -webkit-animation: flickerAnimation 1s infinite;
+     -moz-animation: flickerAnimation 1s infinite;
+     -o-animation: flickerAnimation 1s infinite;
+      animation: flickerAnimation 1s infinite;
+  }
