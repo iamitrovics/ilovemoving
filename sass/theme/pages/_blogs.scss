@@ -1,4 +1,4 @@
-#blog-listing {
+#blog-listing, .similar-posts {
     padding-top: 50px;
     padding-bottom: 120px;
      @include breakpoint (desktop) {
@@ -298,6 +298,32 @@
                 }
             }
         }
+    }
+}
+.similar-posts {
+    &.first-child-box {
+        padding-bottom: 0;
+    }
+    h2 {
+        margin-bottom: 30px;
+        text-align: center;
+        color: #404040;
+        text-transform: uppercase;
+    }
+    h3 {
+        font-size: 1.5rem !important;
+        a {
+            color: #404040;
+            &:hover {
+                color: $red;
+            }
+        }
+    }
+    .blog-photo {
+        height: 230px;
+    }
+    .blog-content {
+        padding-top: 10px;
     }
 }
 #blog-page {
