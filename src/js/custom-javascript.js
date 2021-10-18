@@ -282,6 +282,50 @@
             adaptiveHeight: true,
             arrows: true,
         });
+
+        $('.post-wrapper').slick({
+			infinite: true,
+			speed: 300,
+			slidesToShow: 5,
+			slidesToScroll: 1,
+			dots: false,
+			arrows: true,
+			autoplay: true,
+			autoplaySpeed: 8000,
+			responsive: [
+			{
+			  breakpoint: 1199,
+			  settings: {
+				  slidesToShow: 4,
+				  slidesToScroll: 1,
+				  autoplay: true,
+				  dots: false,
+				  autoplaySpeed: 8000
+				}
+			  },
+			  {
+			  breakpoint: 991,
+			  settings: {
+				  slidesToShow: 3,
+				  slidesToScroll: 1,
+				  autoplay: true,
+				  dots: false,
+				  autoplaySpeed: 8000
+				}
+			  },
+			  {
+				breakpoint: 767,
+				settings: {
+				  slidesToShow: 2,
+				  slidesToScroll: 1,
+				  autoplay: true,
+				  dots: false,
+				  autoplaySpeed: 8000
+				}
+			  },
+			]
+		  });
+        
         $(document).on('click', '#city-services .city-services-list .csl-item a', function(event) {
             event.preventDefault();
             $('html, body').animate({

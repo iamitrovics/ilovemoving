@@ -1235,3 +1235,55 @@
         }
     }
 }
+
+#post-nav {
+    background-color: #ee3800;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    .item {
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        .nav-col {
+            text-align: center;
+            height: 100%;
+            @include animate-fade;
+            &:hover {
+                transform: scale(1.1);
+                span {
+                    color:$white;
+                }
+            }
+            .icon {
+                margin:0px auto;
+                width: 66px;
+                height: 66px;
+                border-radius: 4px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                img {
+                    @include centre(both);
+                    width: 46px;
+                    filter: brightness(0) invert(1);
+                }                
+            }
+            span {
+                display: block;
+                color:$white;
+                margin-top: 10px;
+                font-size: 1em;
+                font-family: $font-heading;
+                text-transform: uppercase;
+                line-height: 1.222;
+                @include animate-fade;
+                @include media-breakpoint-down(sm) {
+                    font-size: 1em;
+                }                    
+            }
+        }
+    }    
+}
