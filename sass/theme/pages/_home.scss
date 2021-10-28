@@ -84,6 +84,15 @@
                 }
             }
         }
+        &.services-blog-module {
+            max-width: 100% !important;
+            margin: 50px 0;
+            .service-item {
+                img {
+                    width: 100%;
+                }
+            }
+        }
     }
 }
 
