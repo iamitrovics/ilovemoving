@@ -1,0 +1,160 @@
+#search-result {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    .search-intro, .search-results {
+        max-width: 792px;
+    }
+    .search-intro {
+        text-align: center;
+        margin-bottom: 60px;
+        @include bp(sm-down) {
+            margin-bottom: 20px;
+        }
+        p {
+            @include regular-text;
+        }
+        form {
+            .input-wrapper {
+                display: flex;
+                align-items: center;
+                position: relative;
+                input[type="text"] {
+                    display: block;
+                    width: 100%;
+                    font-family: $lato-reg;
+                    font-size: 13px;
+                    padding: 12px 28px 12px 15px;
+                    border: 2px solid rgba(0, 0, 0, 0.12);
+                    color: #767676;
+                    background-color: #fdfdfd;
+                }
+                button[type="submit"] {
+                    @include centre(y);
+                    right: 15px;
+                    background: none;
+                    padding: 0;
+                    border: 0;
+                    height: 100%;
+                    @include animate-fade;
+                    i {
+                        color: #767676; 
+                        font-size: 16px;
+                    }
+                    &:hover {
+                        i {
+                            color: $red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .search-results {
+        .search-item {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-bottom: 1px solid rgba(128,128,128,.2);
+            h2 {
+                @include heading-font4;
+                a {
+                    color: inherit;
+                    display: inline-block;
+                    &:hover {
+                        color: $red;
+                    }
+                }
+            }
+            span.search-meta {
+                @include regular-text;
+                display: block;
+                color: #999;
+                margin-bottom: 6px;
+                a {
+                    color: $red;
+                }
+            }
+            p {
+                @include regular-text;
+            }
+        }
+    }
+    .custom-pager {
+        padding: 65px 0 40px;
+        @include bp(desktop) {
+            padding-top: 50px;
+        }
+        @include bp(lg) {
+            padding-top: 40px;
+            padding-bottom: 0;
+        }
+        @include bp(md) {
+            padding-top: 30px;
+            padding-bottom: 0;
+        }
+        @include bp(sm-down) {
+            padding-top: 20px;
+            padding-bottom: 0;
+        }
+        .row {
+            align-items: center;
+        }
+        .col {
+            &:first-of-type {
+                flex-grow: 2;
+            }
+            @include bp(sm-down) {
+                min-width: 100%;
+            }
+        }
+        .pager-nav {
+            ul {
+                font-size: 0;
+                @include bp(sm-down) {
+                    display: flex;
+                    justify-content: center;
+                    margin-bottom: 20px;
+                }
+                li {
+                    &:first-of-type {
+                        margin-left: 0;
+                    }
+                    &:last-of-type {
+                        margin-right: 0;
+                    }
+                    a, span {
+                        display: block;
+                        padding: 10px 14px;
+                        line-height: 12px;
+                        font-size: 12px;
+                        margin: 0 6px;
+                        font-family: $lato-bold;
+                        float: left;
+                        border: 2px solid transparent;
+                        color: #9a9a9a;
+                        color: rgba(0, 0, 0, 0.4);
+                        &:hover {
+                            color: $red;
+                        }
+                    }
+                    i {
+                        font-size: 1.125em;
+                    }
+                    span {
+                        &.current {
+                            border: 2px solid #000;
+                        }
+                    }
+                    &.prev, &.next {
+                        a {
+                            @include bp(sm-down) {
+                                padding-left: 5px;
+                                padding-right: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

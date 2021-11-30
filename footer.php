@@ -236,6 +236,14 @@ $container = get_theme_mod( 'understrap_container_type' );
 <!-- /#cookie-notice -->
 <a id="go-to-top" href="javascript:;"><i class="fas fa-chevron-up"></i></a>
 
+
+	<div id="fixed-cta">
+		<span class="label">Get a Free Estimate</span>
+		<a href="tel:855-879-6683"><small><img src="<?php bloginfo('template_directory'); ?>/img/ico/phone-solid.svg" alt=""></small><span>Call: </span> <strong>855-879-6683</strong></a>
+	</div>
+	<!-- // fixed cta  -->
+
+
 </body>
 </html>
 

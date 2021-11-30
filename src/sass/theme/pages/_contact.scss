@@ -1,0 +1,105 @@
+#contact-page {
+    padding-top: 80px;
+    padding-bottom: 50px;
+    .contact-form {
+        padding-right: 20px;
+        @include bp(sm-down) {
+            padding-right: 0;
+        }
+        .row {
+            padding-left: 7px;
+            padding-right: 7px;
+            [class*="col-"] {
+                padding-left: 8px;
+                padding-right: 8px;
+            }
+            .col-md-6 {
+                @include bp(sm-down) {
+                    flex: 0 0 50%;
+                    max-width: 50%;
+                }
+            }
+        }
+        form {
+            .form-group {
+                margin-bottom: 20px;
+            }
+            input[type=text], input[type=number], input[type=email], input[type=tel], textarea, .bootstrap-select .btn {
+                @include input-style;
+                @include bp(lg-up) {
+                    font-size: 1.125em;
+                }
+            }
+            .control--radio {
+                display: inline-block;
+                letter-spacing: 0;
+                font-size: 14px;
+                font-family: $lato-reg!important;
+            }
+            .bootstrap-select .btn {
+                padding-right: 30px;
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+            .control--checkbox {
+                margin-top: 20px;
+                letter-spacing: 0;
+                font-size: 14px;
+                font-family: $lato-reg!important;
+                @include bp(sm-down) {
+                    margin-top: 0;
+                }
+            }
+            .control--checkbox .control__indicator, .control--radio .control__indicator {
+                @include bp(lg-up) {
+                    top: 3px;
+                }
+            }
+            textarea {
+                height: 160px;
+            }
+            .zebra_tooltips_below {
+                @include bp(lg-up) {
+                    font-size: 1.125em;
+                }
+            }
+        }
+        label {
+            @include input-label;
+            @include bp(lg-up) {
+                font-size: 18px!important;
+            }
+        }
+        input[type=submit] {
+            @include red-btn;
+        }
+    }
+    .contact-info {
+        text-align: center;
+        margin-top: 30px;
+        p {
+            font-family: $lato-bold;
+            font-size: 1.250em;
+            line-height: 1.3;
+            color: #404040;
+            margin-bottom: 0;
+            @include bp(md) {
+                font-size: 1.13em;
+            }
+            &:last-of-type {
+                margin-top: 18px;
+            }
+            a {
+                color: #404040;
+                &:hover {
+                    text-decoration: none;
+                    color: $red;
+                }
+            }
+            strong {
+                font-weight: normal;
+                color: $red;
+            }
+        }
+    }
+}
