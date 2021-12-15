@@ -220,8 +220,8 @@ $container = get_theme_mod( 'understrap_container_type' );
                                                         $content  = get_sub_field('content');
                                                         ?>  
                                                         <div class="faq-wrap">
-                                                            <h3><?php echo $title; ?></h3>
-                                                            <div>
+                                                            <h3 class="accordion-heading"><?php echo $title; ?></h3>
+                                                            <div class="content">
                                                                 <?php echo $content; ?>
                                                             </div>
                                                         </div>
