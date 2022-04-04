@@ -44,21 +44,20 @@ defined( 'ABSPATH' ) || exit;
                             
         </ul>
     </div>
-    <!-- /.blog-rhs-item -->
+    <!--
     <div class="blog-rhs-item">
         <span class="rhs-title">Archives</span>
         <ul>
             <?php wp_get_archives(); ?>
         </ul>
     </div>
-    <!-- /.blog-rhs-item -->
     <div class="blog-rhs-item">
         <span class="rhs-title">Categories</span>
         <ul>
             <?php wp_list_categories('title_li='); ?>
         </ul>
     </div>
-    <!-- /.blog-rhs-item -->
+     -->
 </div>
 <!-- /.blog-rhs -->
 

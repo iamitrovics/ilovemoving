@@ -306,6 +306,66 @@ $container = get_theme_mod( 'understrap_container_type' );
             </div>
             <!-- /.container-fluid -->
 
+        <?php elseif( get_row_layout() == 'image_left_text_right' ): ?>
+
+            <div class="container regular-page city-regular">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="featured-photo section-cities">
+                            <?php
+                            $imageID = get_sub_field('featured_image');
+                            $image = wp_get_attachment_image_src( $imageID, 'side-image' );
+                            $alt_text = get_post_meta($imageID , '_wp_attachment_image_alt', true);
+                            ?> 
+
+                            <img class="img-responsive" alt="<?php echo $alt_text; ?>" src="<?php echo $image[0]; ?>" /> 
+                            <div class="caption">
+                                <?php the_sub_field('image_caption'); ?>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.col-md-6 -->
+                    <div class="col-md-6">
+                        <div class="full-content">
+                            <?php the_sub_field('content_block'); ?>
+                        </div>
+                    </div>
+                    <!-- /.col-md-6 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container-fluid -->
+
+        <?php elseif( get_row_layout() == 'image_right_text_left' ): ?>
+
+            <div class="container regular-page city-regular">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="full-content">
+                            <?php the_sub_field('content_block'); ?>
+                        </div>
+                    </div>
+                    <!-- /.col-md-6 -->
+                    <div class="col-md-6">
+                        <div class="featured-photo section-cities">
+                            <?php
+                            $imageID = get_sub_field('featured_image');
+                            $image = wp_get_attachment_image_src( $imageID, 'side-image' );
+                            $alt_text = get_post_meta($imageID , '_wp_attachment_image_alt', true);
+                            ?> 
+
+                            <img class="img-responsive" alt="<?php echo $alt_text; ?>" src="<?php echo $image[0]; ?>" /> 
+                            <div class="caption">
+                                <?php the_sub_field('image_caption'); ?>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.col-md-6 -->
+                </div>
+                <!-- /.row -->
+            </div>
+            <!-- /.container-fluid -->
+
         <?php elseif( get_row_layout() == 'full_width_image' ): ?>
 
             <div class="container">

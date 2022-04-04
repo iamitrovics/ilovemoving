@@ -565,3 +565,25 @@
         }
     }
 }
+#cities-list {
+    ul {
+        list-style: disc;
+        columns: 3;
+        padding: 40px 0;
+        @include bp(sm-down) {
+            columns: 1;
+        }
+        li {
+            margin-bottom: 5px;
+            &::marker {
+                color: $red;
+            }
+            a {
+                color: $black;
+                &:hover {
+                    color: $red;
+                }
+            }
+        }
+    }
+}
