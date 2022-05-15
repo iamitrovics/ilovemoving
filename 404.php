@@ -20,7 +20,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                 <span class="not-found-title"><?php the_field('text_first_404', 'options'); ?></span>
                 <h1><?php the_field('title_404', 'options'); ?></h1>
                 <p><?php the_field('text_second_404', 'options'); ?></p>
-                <?php get_template_part('searchform'); ?>
+                <!-- <?php get_template_part('searchform'); ?> -->
             </div>
             <!-- /.col-md-12 -->
         </div>
