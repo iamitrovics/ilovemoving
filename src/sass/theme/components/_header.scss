@@ -85,6 +85,7 @@
     width: 100%;
     z-index: 9997;
     @include animate-fade;
+    box-shadow: rgba(0, 0, 0,  0.05%) 0px 5px 20px 0px;
    /* @include bp(sm-down) {
        background-color: $green;
        position: static;
@@ -109,6 +110,10 @@
         #menu-wrapper {
             padding-top: 0;
             padding-bottom: 0;
+            @include bp(sm-down) {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
         }
         #cor-notice {
             padding: 3px;
@@ -162,6 +167,7 @@
                 -ms-interpolation-mode: nearest-neighbor;
                 display: block;
                 @include bp(md-down) {
+                    width: 150px;
                 }
                 @include bp(sm-down) {
                 }
@@ -181,6 +187,7 @@
 #masheader {
     .header-caption {
         text-align: center;
+        padding-top: 40px;
         @include bp(sm-down) {
             padding-top: 40px;
         }
@@ -218,7 +225,7 @@
                 }
             }
             &:last-of-type {
-                font-family: $lato-semi;
+                font-family: $lato-bold;
                 font-size: 1.375em;
                 line-height: 1.3;
                 margin-bottom: 38px;
@@ -267,7 +274,7 @@
             margin-bottom: 18px;
         }
         h2 {
-            font-family: $lato-light;
+            font-family: $lato-reg;
             letter-spacing: 0px;
             font-size: 1.750em;
             line-height: 1.2;
@@ -336,4 +343,35 @@
             }
         }
     }
+}
+
+
+// mobile
+#mobile-menu--btn {
+    @include centre(y);
+    width: 35px;
+    right: 15px;
+    display: none;
+    @include bp(md-down) {
+        display: block;
+    }
+    a {
+        display: block;
+        width: 100%;
+        height: auto;
+        span {
+            height: 3px;
+            border-radius:6px;
+            background-color:$red;
+            width: 100%;
+            display: block;
+            float: right;
+            @include animate-fade;
+            margin-top: 3px;
+            margin-bottom: 3px;
+        }	
+    }
+    .clearfix {
+        clear: both;
+    }       
 }

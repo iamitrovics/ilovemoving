@@ -53,6 +53,43 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<?php the_field('body_code_snippet', 'options'); ?>
 	<?php endif; ?>
 
+	<div class="menu-overlay"></div>
+	<div class="main-menu-sidebar visible-xs visible-sm visible-md" id="menu">
+
+		<header>
+			<a href="javascript:;" class="close-menu-btn"><img src="<?php bloginfo('template_directory'); ?>/img/ico/close-x.svg" alt=""></a>
+		</header>
+		<!-- // header  -->
+
+
+		<nav id="sidebar-menu-wrapper">
+			<img src="<?php the_field('website_logo_general', 'options'); ?>" alt="" class="mobile-logo">
+			<div id="menu">    
+				<ul class="nav-links">
+					<?php
+					wp_nav_menu( array(
+						'menu'              => 'mobile',
+						'theme_location'    => 'mobile',
+						'depth'             => 2,
+						'container'         => false,
+						'container_class'   => 'collapse navbar-collapse',
+						'container_id'      => false,
+						'menu_class'        => 'nav navbar-nav',
+						'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
+						'items_wrap' => '%3$s',
+						'walker'            => new wp_bootstrap_navwalkermobile())
+					);
+					?>  
+				</ul>
+			</div>
+			<!-- // menu  -->
+
+		</nav> 
+		<!-- // sidebar menu wrapper  -->
+
+	</div>
+	<!-- // main menu sidebar  -->		
+
 	<div id="fixed-sidenav">
 			<div class="sticky-popup">
 				<div class="popup-header">
@@ -108,37 +145,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<!-- /.sticky-popup -->
 		</div>
 		<!-- /#fixed-sidenav -->
-		<div class="menu-overlay"></div>
-		<div class="main-menu-sidebar">
-			<header class="visible-xs visible-sm visible-md">
-				<a href="javascript:;" class="close-menu-btn"><img src="<?php echo get_template_directory_uri(); ?>/img/ico/close.svg" alt=""></a>
-			</header>
-			<!-- // header  -->        
-			<div id="mobile__brand">
-				<img src="<?php echo get_template_directory_uri(); ?>/img/logos/logo.png" alt="">
-			</div>
-			<!-- // brand  -->
-			<div id="menu">
-				<ul>
-					<?php
-					wp_nav_menu( array(
-						'menu'              => 'mobile',
-						'theme_location'    => 'mobile',
-						'depth'             => 2,
-						'container'         => false,
-						'container_class'   => 'collapse navbar-collapse',
-						'container_id'      => false,
-						'menu_class'        => 'nav navbar-nav',
-						'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
-						'items_wrap' => '%3$s',
-						'walker'            => new wp_bootstrap_navwalkermobile())
-					);
-					?> 
-				</ul>
-			</div>
-			<!-- // menu  -->
-		</div>
-		<!-- // mobile menu  -->
+
+
+
 		<div class="page-wrapper">
 			<div id="menu_area" class="menu-area">
 				<div id="cor-notice">
@@ -211,14 +220,17 @@ $container = get_theme_mod( 'understrap_container_type' );
 										<?php endif; ?>
 										</ul>
 										<!-- /.navbar-nav -->
-										<div id="top__mobile">
-											<a href="javascript:;" class="menu-btn">
+
+										<div id="mobile-menu--btn" class="d-lg-none">
+											<a href="javascript:;">
 												<span></span>
 												<span></span>
 												<span></span>
+												<div class="clearfix"></div>
 											</a>
 										</div>
-										<!-- /#top__mobile -->
+										<!-- // mobile  -->	
+
 									</div>
 									<!-- /.navbar-collapse -->
 								</nav>
