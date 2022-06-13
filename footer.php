@@ -14,8 +14,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
 
-	<?php wp_footer(); ?>
-
 	<?php if( get_field('footer_code_snippet', 'options') ): ?>
 		<?php the_field('footer_code_snippet', 'options'); ?>
 	<?php endif; ?>
@@ -236,12 +234,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 <!-- /#cookie-notice -->
 <a id="go-to-top" href="javascript:;"><i class="fas fa-chevron-up"></i></a>
 
+    <?php wp_footer(); ?>
 
 	<div id="fixed-cta">
 		<span class="label">Get a Free Estimate</span>
 		<a href="tel:855-879-6683"><small><img src="<?php bloginfo('template_directory'); ?>/img/ico/phone-solid.svg" alt=""></small><span>Call: </span> <strong>855-879-6683</strong></a>
 	</div>
 	<!-- // fixed cta  -->
+
+    <script>
+    if (!sessionStorage.alreadyClicked) {
+        jQuery('#cookie-notice').addClass('slide-up');
+        sessionStorage.alreadyClicked = 1;
+    }
+  </script> 
 
 
 </body>
