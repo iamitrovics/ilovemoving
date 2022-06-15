@@ -387,7 +387,15 @@ get_header(); ?>
                         <div class="row">
                             <div class="col-md-8">
                                 <div class="company-map">
-                                    <?php echo $map; ?>
+                                    <a href="<?php the_sub_field('location_url'); ?>" target="_blank">
+                                        <?php 
+                                        $image = get_sub_field('location_map');
+                                        $size = 'full'; // (thumbnail, medium, large, full or custom size)
+                                        if( $image ) {
+                                            echo wp_get_attachment_image( $image, $size );
+                                        }   
+                                        ?>    
+                                    </a>
                                 </div>
                                 <!-- /.company-map -->
                             </div>

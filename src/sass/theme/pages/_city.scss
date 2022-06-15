@@ -352,8 +352,8 @@
             }
         }
         em {
-            font-family: $lato-italic;
-            font-style: normal;
+            font-family: $lato-reg;
+            font-style: italic;
         }
         ul {
             text-align: left;
@@ -458,7 +458,8 @@
             p {
                 @include regular-text;
                 color: #555555;
-                font-family: $lato-italic;
+                font-family: $lato-reg;
+                font-style: italic;
                 margin-bottom: 0;
             }
             .review-logo {
