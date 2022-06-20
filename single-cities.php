@@ -293,7 +293,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
         <?php elseif( get_row_layout() == 'full_width_content' ): ?>
 
-            <div class="container section-area" id="regular-page">
+            <div class="container section-area regular-page">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="full-content">
