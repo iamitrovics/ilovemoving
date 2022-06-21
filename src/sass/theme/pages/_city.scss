@@ -589,3 +589,45 @@
         }
     }
 }
+
+// list
+.location-list {
+    h2 {
+        font-size: 30px!important;
+    }
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 60px;
+        li {
+            display: block;
+            margin-bottom: 15px;
+            padding-left: 20px;
+            font-size: 1em;
+            position: relative;
+            width: 25%;
+            @include bp(md) {
+                width: 50%;
+            }
+            @include bp(sm-down) {
+                width: 100%;
+            }
+            &:before {
+                content:'';
+                width: 7px;
+                height: 7px;
+                background:$red;
+                position: absolute;
+                left:0px;
+                top:10px;
+            }
+            a {
+                color:$black;
+                font-size: 18px;
+                &:hover {
+                    color:$red;
+                }
+            }
+        }
+    }    
+}

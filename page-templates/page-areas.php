@@ -10,7 +10,7 @@ get_header(); ?>
         <div class="row">
             <div class="col-lg-12">
                 <div class="header-caption">
-                    <h1><?php the_title(); ?></h1>
+                    <h1><?php the_field('main_title_header_cities') ?></h1>
                 </div>
                 <!-- /.header-caption -->
             </div>
@@ -22,36 +22,50 @@ get_header(); ?>
 </header>
 <!-- /#inner-header -->
 
-<section id="cities-list">
-    <div class="container">
-        <div class="row">
+	<section id="about-page" class="section-area">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="location-list">
 
-                <div class="col-md-12">
-                    <ul>
-                        <?php
-                            $loop = new WP_Query( array( 'post_type' => 'cities', 'posts_per_page' => 14325) ); ?>  
-                            <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+						<?php
+							// check if the repeater field has rows of data
+							if(have_rows('single_area')):
+								// loop through the rows of data
+								while(have_rows('single_area')) : the_row();?>  
+									<h2><?php the_sub_field('cities_subtitles'); ?></h2>
 
-                        <li>
-                            <a href="<?php echo get_permalink(); ?>">
-                                <?php the_title(); ?>
-                            </a>
-                        </li>
+									<ul>
+									<?php
+										// check if the repeater field has rows of data
+										if(have_rows('cities_single_repeater')):
+											// loop through the rows of data
+											while(have_rows('cities_single_repeater')) : the_row();?>  
+												
+												<li><a href="<?php the_sub_field('city_link_repeater'); ?>"><?php the_sub_field('city_name_repeater'); ?></a></li>
+													
+											<?php endwhile;
+										else :
+											echo 'No data';
+										endif;
+									?>
+									</ul>
 
-                            <?php endwhile; ?>
-                        <?php wp_reset_postdata(); ?>     
-                    </ul>
-                   
-                </div>	
-                <!-- // col-md-12  -->
+								<?php endwhile;
+							else :
+								echo 'No data';
+							endif;
+						?>
 
-             
-
-        </div>
-        <!-- // row  -->
-    </div>
-    <!-- // container  -->
-</section>
-<!-- // list  -->
+					</div>
+					<!-- // list  -->
+				</div>
+				<!-- /.col-md-12 -->
+			</div>
+			<!-- /.row -->
+		</div>
+		<!-- /.container -->
+	</section>
+	<!-- /#about-area -->
 
 <?php get_footer(); ?>
