@@ -112,14 +112,6 @@ $container = get_theme_mod( 'understrap_container_type' );
                     </ul>
                 </div>
                 <!-- /.footer-sitemap -->
-                <div class="footer-breadcrumb">
-                    <span class="footer-title">This Page</span>
-                    <!-- /.footer-title -->
-                    <ul>
-                       <li><?php the_breadcrumb(); ?></li>
-                    </ul>
-                </div>
-                <!-- /.footer-sitemap -->
             </div>
             <!-- /.col -->
             <div class="col">
