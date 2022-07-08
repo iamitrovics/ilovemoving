@@ -16,7 +16,21 @@
         <!-- /.container -->
     </header>
     
-
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="blog-filters">
+                    <ul>
+                        <li><a href="<?php bloginfo('url'); ?>/blog/">All</a></li>
+                        <?php wp_list_categories('title_li='); ?>
+                    </ul>
+                </div>
+                <!-- /.blog-filters -->
+            </div>
+            <!-- /.col-md-12 -->
+        </div>
+        <!-- /.row -->
+    </div>
 
 <div id="blog-listing">
     <div class="container">

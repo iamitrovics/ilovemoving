@@ -7,6 +7,7 @@
  get_header();  ?>
 
     <header id="featured-header"  style="background-image: url(<?php the_field('background_image_feat_header') ?>);">
+        <div class="overlay"></div>
         <div class="container">
             <div class="hero-caption">
                 <h1><?php the_title(); ?></h1>
