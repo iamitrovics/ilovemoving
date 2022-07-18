@@ -23,7 +23,7 @@
                     <ul>
                         <li><a href="<?php bloginfo('url'); ?>/blog/">All</a></li>
                         <?php wp_list_categories('title_li='); ?>
-                    </ul>
+                    </ul>s
                 </div>
                 <!-- /.blog-filters -->
             </div>
